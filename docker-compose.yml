@@ -23,7 +23,7 @@ services:
       interval: 30s
       timeout: 10s
       retries: 3
-    mem_limit: 4g              # Maximum memory allocation (8 GB)
+    mem_limit: 8g              # Maximum memory allocation (8 GB)
     cpus: 4                    # Maximum number of CPUs (4 vCPUs)
 
   abaco:
@@ -45,8 +45,8 @@ services:
       interval: 30s
       timeout: 10s
       retries: 3
-    mem_limit: 4g              # Maximum memory allocation (8 GB)
-    cpus: 4                    # Maximum number of CPUs (4 vCPUs)
+    mem_limit: 8g             
+    cpus: 4              
 
   ak:
     image: minio/minio:RELEASE.2024-10-29T16-01-48Z-cpuv1
@@ -67,8 +67,8 @@ services:
       interval: 30s
       timeout: 10s
       retries: 3
-    mem_limit: 4g              # Maximum memory allocation (8 GB)
-    cpus: 4                    # Maximum number of CPUs (4 vCPUs)
+    mem_limit: 8g            
+    cpus: 4                   
 
   nginx:
     image: nginx:latest
@@ -92,8 +92,8 @@ services:
       interval: 30s
       timeout: 10s
       retries: 3
-    mem_limit: 4g              # Maximum memory allocation (8 GB)
-    cpus: 4                    # Maximum number of CPUs (4 vCPUs)
+    mem_limit: 16g             
+    cpus: 4                    
 
 networks:
   stelar_net:
