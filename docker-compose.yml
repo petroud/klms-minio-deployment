@@ -12,10 +12,12 @@ services:
     environment:
       MINIO_ROOT_USER: ${VISTA_ROOT_USER}
       MINIO_ROOT_PASSWORD: ${VISTA_ROOT_PASSWORD}
-      MINIO_DOMAIN: stelar.gr
-      MINIO_SERVER_URL: https://api-s3-vista.stelar.gr
+      MINIO_BROWSER_REDIRECT_URL: https://console-s3-vista.stelar.gr/
     command: server --console-address ":9001" /minio/data
     restart: always
+    expose:
+      - 9000
+      - 9001
     healthcheck:
       test: ["CMD", "curl", "-f", "http://172.10.0.10:9000/minio/health/live"]
       interval: 30s
@@ -35,8 +37,7 @@ services:
     environment:
       MINIO_ROOT_USER: ${ABACO_ROOT_USER}
       MINIO_ROOT_PASSWORD: ${ABACO_ROOT_PASSWORD}
-      MINIO_DOMAIN: stelar.gr
-      MINIO_SERVER_URL: https://api-s3-abaco.stelar.gr
+      MINIO_BROWSER_REDIRECT_URL: https://console-s3-abaco.stelar.gr/
     command: server --console-address ":9001" /minio/data
     restart: always
     healthcheck:
@@ -58,8 +59,7 @@ services:
     environment:
       MINIO_ROOT_USER: ${AK_ROOT_USER}
       MINIO_ROOT_PASSWORD: ${AK_ROOT_PASSWORD}
-      MINIO_DOMAIN: stelar.gr
-      MINIO_SERVER_URL: https://api-s3-ak.stelar.gr
+      MINIO_BROWSER_REDIRECT_URL: https://console-s3-ak.stelar.gr/
     command: server --console-address ":9001" /minio/data
     restart: always
     healthcheck:
