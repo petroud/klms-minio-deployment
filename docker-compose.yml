@@ -23,7 +23,7 @@ services:
       interval: 30s
       timeout: 10s
       retries: 3
-    mem_limit: 8g             
+    mem_limit: 12g             
     cpus: 4                   
 
   abaco:
@@ -45,7 +45,7 @@ services:
       interval: 30s
       timeout: 10s
       retries: 3
-    mem_limit: 8g             
+    mem_limit: 12g             
     cpus: 4              
 
   ak:
@@ -67,7 +67,7 @@ services:
       interval: 30s
       timeout: 10s
       retries: 3
-    mem_limit: 8g            
+    mem_limit: 12g            
     cpus: 4                   
 
   nginx:
@@ -92,7 +92,7 @@ services:
       interval: 30s
       timeout: 10s
       retries: 3
-    mem_limit: 16g             
+    mem_limit: 8g             
     cpus: 4                    
 
 networks:
